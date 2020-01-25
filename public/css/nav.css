@@ -1,0 +1,23 @@
+body {
+    box-sizing: border-box;
+}
+
+.custom-nav {
+    padding: 5 20;
+    background-color: #595386 !important;
+    margin-bottom: 40px;
+}
+
+.nav-item{
+    margin-right: 40px !important;
+}
+
+.navbar-brand {
+    margin-right: 50px;
+    font-size: 1.6rem !important;
+}
+
+.navbar-collapse {
+    font-size: 1.3rem;
+}
+

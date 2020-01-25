@@ -1,0 +1,37 @@
+{
+  "name": "SIH",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ayush-KS/SIH.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ayush-KS/SIH/issues"
+  },
+  "homepage": "https://github.com/Ayush-KS/SIH#readme",
+  "dependencies": {
+    "animejs": "^3.1.0",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^3.2.0",
+    "dotenv": "^8.2.0",
+    "edge": "^7.10.1",
+    "edge.js": "^1.1.4",
+    "express": "^4.17.1",
+    "express-edge": "^2.0.1",
+    "express-session": "^1.17.0",
+    "mongoose": "^5.8.9",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}

@@ -1,0 +1,93 @@
+@layout('layouts.app')
+
+@section('title')
+Refused Bribe
+@endsection
+
+@section('styles')
+<link rel="stylesheet" href="/css/refusedBribe.css">
+@endsection
+
+@section('content')
+    <section id="content">
+        <main>
+            <div class="form-desc">
+                <h1 class="ml1">
+                    <span class="text-wrapper">
+                      <span class="letters"> We understand that in some situations, you are left with no choice but to go with the ethically questionable move.
+        
+                        Here you can share your experience and we'll try to make sure that nobody else has to go through a similar situation.
+                    </span>
+                    </span>
+                  </h1>
+            </div>
+
+            <div class="form-style-8">
+                <h2>Please enter the following details to the best of your knowledge!</h2>
+                <form action="/submit/refusedbribe" method="POST">
+                    <select name="service" value="{{ data.service || '' }}">
+                        <option value="" selected disabled hidden>Choose the service</option>
+                        <option value="Healthcare"> Healthcare </option>
+                        <option value="Banking"> Banking </option>
+                        <option value="Railways"> Railways </option>
+                        <option value="Passport"> Passport Seva </option>
+                        <option value="Traffic"> Traffic Policing </option>
+                    </select>
+                  <input type="text" name = "city" placeholder="City" value="{{ data.city || '' }}"/>
+                  <input type="text" name = "state" placeholder="State" value="{{ data.state || '' }}"/>
+
+                  <input type="text" name="reason" placeholder="Why were you asked for a bribe?" value="{{ data.reason || '' }}" />
+
+                  <div id="date">
+                    <p>
+                      When did it happen?
+                    </p>
+                    <input type="datetime" name="datetime" value="{{ data.datetime || '' }}">
+                  </div>
+                  
+                  <input type="text" name="title" placeholder="Enter the title of your report" value="{{ data.title || '' }}" />
+                  <input type="text" name="description" placeholder="Describe your experience" value="{{ data.description || '' }}" />
+
+                  <input type="number" name="govtId" placeholder="Adhaar Number" value="{{data.govtId || ''}}" />
+                  <h4>*This is an optional attribute. Do not fill if you wish to remain anonymous!</h4>
+                  
+                  <input type="submit" value="Send Message" />
+                </form>
+              </div>
+
+        </main>
+    
+        <aside>
+    
+            <div class="card text-center">
+                <div class="card-header"> Successfully battled bribery story! </div>
+                <div class="card-body">
+                    <h5 class="card-title">NASA launches solar probe</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante.</p>
+                    <a href="#" class="btn btn-primary">Know more</a>
+                </div>
+                <div class="card-footer"> Get your own story featured! </div>
+            </div>
+
+            <div class="card text-center">
+                <div class="card-header"> Successfully battled bribery story! </div>
+                <div class="card-body">
+                    <h5 class="card-title">NASA launches solar probe</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante.</p>
+                    <a href="#" class="btn btn-primary">Know more</a>
+                </div>
+                <div class="card-footer"> Get your own story featured! </div>
+            </div>
+
+        </aside>
+
+    </section>
+@endsection
+
+@section('scripts')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js" 
+    integrity="sha256-kRbW+SRRXPogeps8ZQcw2PooWEDPIjVQmN1ocWVQHRY=" crossorigin="anonymous">
+    </script>
+    <script src="/js/refusedBribe.js"></script>
+@endsection
+

@@ -1,0 +1,132 @@
+@layout('layouts.homeLayout')
+
+@section('title')
+Home
+@endsection
+
+@section('styles')
+<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/home.css">
+@endsection
+
+@section('content')
+    
+<section id="my-section">
+    
+    <div class="active" id="wrap-cta">
+      <div id="heading">
+        Curb Corruption!
+      </div>
+      <button id="cta">Explore our Services!</button>
+      <div id="indiaMap">
+        <img src="./images/Indiamap.jpg" alt="India" usemap="#Indiamap" id="India">
+
+        <map name="Indiamap">
+            <area shape="poly" coords="129,44,144,62,139,72,139,88,160,100,175,90,195,100,208,95,200,80,215,56,190,57,156,35,129,44" alt="J&K" onmouseover="getDetails(this)" onmouseout="removeDetails()">
+            <area shape="poly" coords="163,104,171,95,192,103,199,116,188,121,185,130,163,104" alt="H.P" onmouseover="getDetails(this)" onmouseout="removeDetails()">
+            <area shape="poly" coords="155,106,173,125,157,139,142,133,155,106" alt="Punjab" onmouseover="getDetails(this)" onmouseout="removeDetails()">
+
+            <area shape="poly" coords="223,133,213,152,190,135,197,120,223,133" alt="Uttarakhand" onmouseover="getDetails(this)" onmouseout="removeDetails()">
+        </map>
+
+        <div id="bribe-details">
+          Know the corruption details state-wise:
+        </div>
+
+        <div class="card" id="state-info-card" style="width: 250px;">
+          <div class="card-body text-center">
+              <h5 class="card-title" id="state-info">State</h5>
+              <br>
+              <h6 class="card-text">Total instances of bribes: 4562</h6>
+              <h6 class="card-text">Total amount in INR: 2,00,00,000</h6>
+              <a href="#" class="btn btn-primary">View Details</a>
+          </div>
+        </div>
+        
+      </div>
+      
+    </div>
+    <svg viewBox="0 0 215 110" preserveAspectRatio="none">
+      <polygon class="polymorph" points="215,110 0,110 0,0 215,0"></polygon>
+    </svg>
+
+
+    <div class="container">
+      <div id="content">
+
+      <a href="/faq">
+        <div class="col-sm-6">
+          <div class="card text-white bg-info mb-4">
+              <div class="card-body">
+                  <h5 class="card-title">FAQ</h5>
+                  <p class="card-text">Find your queries resolved!</p>
+              </div>
+          </div>
+        </div>
+      </a>
+        
+      <a href="/paidBribe">
+        <div class="col-sm-6">
+          <div class="card text-white bg-info mb-4">
+              <div class="card-body">
+                  <h5 class="card-title">Did you have to pay a bribe?</h5>
+                  <p class="card-text">Report your incident in absolute anonymity here help prevent further incidents.</p>
+              </div>
+          </div>
+      </div>
+      </a>
+      
+      <a href="/refusedBribe">
+        <div class="col-sm-6">
+          <div class="card text-white bg-info mb-4">
+              <div class="card-body">
+                  <h5 class="card-title">Are you being asked a bribe?</h5>
+                  <p class="card-text">Not being able to get your work done honestly? Address your issue here.</p>
+              </div>
+          </div>
+        </div>
+      </a>
+
+      <a href="">
+        <div class="col-sm-6">
+          <div class="card text-white bg-info mb-4">
+              <div class="card-body">
+                  <h5 class="card-title">Write to your representatives!</h5>
+                  <p class="card-text">Directly contact your MLAs/MPs.</p>
+              </div>
+          </div>
+      </div> 
+      </a> 
+
+        <div id="info">
+          Fighting Corruption is the first step in making sure a country develops. And this fight starts with you!
+          Go ahead and explore our services and be a warrior against corruption!
+        </div>
+
+        <button id="close">Back to the stats!</button>
+      </div>
+    </div>
+
+    <div id="botting">
+      Bureau of Police Research
+    </div>
+
+  </section>
+
+@endsection
+
+@section('scripts')
+<script>
+  function removeDetails() {
+      document.getElementById("state-info").innerHTML = "State";
+  }
+  
+  function getDetails(ele) {
+      document.getElementById("state-info").innerHTML = ele.alt;
+  }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js" 
+    integrity="sha256-kRbW+SRRXPogeps8ZQcw2PooWEDPIjVQmN1ocWVQHRY=" crossorigin="anonymous">
+  </script>
+  <script src="/js/home.js"></script>
+@endsection
